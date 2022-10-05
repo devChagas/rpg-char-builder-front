@@ -1,0 +1,20 @@
+.header {
+    background-color: #ba251a;
+    justify-content: center;
+    height: 10%;
+}
+
+img {
+    height: 3rem;
+}
+
+h1 {
+    color: antiquewhite;
+    font-size: 1.7rem;
+    padding-left: 1rem;
+}
+
+span {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,8 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #ba251a;  
+    justify-content: flex-end;
+    color: antiquewhite;
+    font-size: 0.9rem;
+}
