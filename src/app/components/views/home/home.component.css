@@ -1,0 +1,23 @@
+.home {
+    width: 90%;
+    margin: 1rem auto;
+    font-family: "MedievalRPG";
+}
+
+div {
+    height: 28rem;
+    background-image: url(https://images4.alphacoders.com/100/1008904.png);
+    background-repeat: round;
+}
+
+@media(max-width: 450px){
+    .home {
+        width: 70%;
+    }
+}
+
+@media(max-width: 770px){
+    .home {
+        width: 80%;
+    }
+}
