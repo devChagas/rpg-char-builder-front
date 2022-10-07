@@ -4,5 +4,8 @@
     background-color: #ba251a;  
     justify-content: flex-end;
     color: antiquewhite;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    height: 5%;
+    font-family: "MedievalRPG";
+    background-image: url(https://i.pinimg.com/600x315/b7/8d/e5/b78de50ead1fe734e86da657e6ef804a.jpg);
 }
