@@ -11,6 +11,8 @@ export class JobsReadComponent implements OnInit {
 
   jobs: Jobs[] = [];
 
+  
+
   page = {} as Pages;
 
   displayedColumns: string[] = ['id', 'jobName', 'combatType', 'actions'];
