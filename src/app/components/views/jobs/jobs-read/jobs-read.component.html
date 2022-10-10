@@ -5,7 +5,7 @@
         <img src="https://i.pinimg.com/originals/2b/a3/e4/2ba3e4b905ef6f95b5c00a3c95183181.png" alt="">
     </div>
     
-    <button mat-stroked-button color="primary">New Job</button>
+    <button (click)="navigateToJobCreate()" mat-stroked-button color="primary">New Job</button>
 
     <div class="mat-elevation-z8 content-table">
       <table mat-table [dataSource]="jobs" class="table" >

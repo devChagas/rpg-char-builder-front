@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Jobs, Pages } from '../jobs.model';
 import { JobsService } from '../jobs.service';
 
@@ -11,13 +12,13 @@ export class JobsReadComponent implements OnInit {
 
   jobs: Jobs[] = [];
 
-  
+
 
   page = {} as Pages;
 
   displayedColumns: string[] = ['id', 'jobName', 'combatType', 'actions'];
 
-  constructor(private service: JobsService) { }
+  constructor(private service: JobsService, private router: Router) { }
 
   ngOnInit(): void {
     this.findAll();
@@ -28,6 +29,10 @@ export class JobsReadComponent implements OnInit {
       this.jobs = resposta.content;
       console.log(this.jobs);
     });
+  }
+
+  navigateToJobCreate(): void {
+    this.router.navigate(["jobs/create"]);
   }
   
 

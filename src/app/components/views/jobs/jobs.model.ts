@@ -23,3 +23,7 @@ export interface Jobs{
     jobName: String;
     combatType: String;
 }
+export interface CombatType{
+    value: String;
+    viewValue: String;
+}
