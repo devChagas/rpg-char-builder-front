@@ -25,6 +25,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { JobsDeleteComponent } from './components/views/jobs/jobs-delete/jobs-delete.component';
 
 
 
@@ -36,7 +37,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     NavComponent,
     HomeComponent,
     JobsReadComponent,
-    JobsCreateComponent
+    JobsCreateComponent,
+    JobsDeleteComponent
   ],
   imports: [
     BrowserModule,

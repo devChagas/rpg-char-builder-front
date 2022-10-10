@@ -1,0 +1,24 @@
+<form>
+    <h1>Deleting Job</h1>
+    <mat-form-field class="form">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" [(ngModel)]="job.jobName" name="jobName" disabled>
+    </mat-form-field>
+
+    <mat-form-field class="input">
+        <mat-label>Combat Type</mat-label>
+        <input matInput type="text" [(ngModel)]="job.combatType" name="combatType" disabled>
+    </mat-form-field>
+
+
+    <div class="buttons">
+        <button (click)="delete()" mat-stroked-button color="primary">Confirm</button>
+        <button (click)="cancel()" class="cancel" mat-stroked-button color="primary">Cancel</button>
+    </div>
+
+    <div class="images">
+        <img src="https://i.pinimg.com/originals/a4/86/d5/a486d58498f1a542fbe3150f7b9063e2.png" alt="">
+        <img src="https://i.pinimg.com/originals/59/56/33/5956330f3d5e0c4d874c1d9f38b8f8e5.png" alt="">
+    </div>
+</form>
+

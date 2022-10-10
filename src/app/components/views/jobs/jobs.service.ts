@@ -19,9 +19,19 @@ export class JobsService {
     return this.http.get<Pages>(url);
   }
 
+  findById(id: String): Observable<Jobs> {
+    const url = `${this.baseUrl}jobs/${id}`;
+    return this.http.get<Jobs>(url);
+  }
+
   create(job: Jobs): Observable<Jobs>{
-    const url = `${this.baseUrl}jobs`
+    const url = `${this.baseUrl}jobs`;
     return this.http.post<Jobs>(url, job);
+  }
+
+  delete(id: String): Observable<void> {
+    const url = `${this.baseUrl}jobs/${id}`;
+    return this.http.delete<void>(url);
   }
 
   message(str: String): void {
