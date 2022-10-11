@@ -1,0 +1,26 @@
+<form>
+    <h1>Updating Race</h1>
+    <mat-form-field class="form">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" [(ngModel)]="race.raceName" name="name" placeholder="Ex. Elfo">
+    </mat-form-field>
+
+    <mat-form-field class="selection">
+        <mat-label>HP Dice</mat-label>
+        <mat-select [(ngModel)]="race.hpDice" name="hpDice">
+          <mat-option *ngFor="let hpDice of hpDices" [value]="hpDice.value">
+            {{hpDice.viewValue}}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="update()" mat-stroked-button color="primary">Confirm</button>
+        <button (click)="cancel()" class="cancel" mat-stroked-button color="primary">Cancel</button>
+    </div>
+
+    <div class="images">
+        <img class="esq" src="https://i.pinimg.com/originals/9c/8f/46/9c8f46470a28abe3097fa736409a58f0.png" alt="">
+        <img src="https://pixeljoint.com/files/icons/full/jaszczur.png" alt="">
+    </div>
+</form>

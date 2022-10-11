@@ -42,10 +42,11 @@ export class JobsDeleteComponent implements OnInit {
       this.service.message('Job deleted successfully!');
       this.router.navigate(['jobs']);
     }, err => {
-      this.service.message('Job deleted successfully!');
+      console.log(err);
+      this.service.message('Internal Server Error, plese try again later!');
       this.router.navigate(['jobs']);
     });
-  } //BUGAGO
+  }
 
   cancel(): void {
     this.router.navigate(['jobs']);

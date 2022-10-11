@@ -12,8 +12,6 @@ export class JobsReadComponent implements OnInit {
 
   jobs: Jobs[] = [];
 
-
-
   page = {} as Pages;
 
   displayedColumns: string[] = ['id', 'jobName', 'combatType', 'actions'];
@@ -27,7 +25,6 @@ export class JobsReadComponent implements OnInit {
   findAll(): void {
     this.service.findAll().subscribe(resposta => {
       this.jobs = resposta.content;
-      console.log(this.jobs);
     });
   }
 

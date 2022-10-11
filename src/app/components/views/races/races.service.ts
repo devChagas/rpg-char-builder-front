@@ -3,40 +3,40 @@ import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Jobs, Pages } from './jobs.model';
+import { Pages, Races } from './races.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class JobsService {
+export class RacesService {
 
   baseUrl: String = environment.baseUrl;
 
   constructor(private http: HttpClient, private snack: MatSnackBar) { }
 
   findAll(): Observable<Pages> {
-    const url = `${this.baseUrl}jobs`
+    const url = `${this.baseUrl}races`
     return this.http.get<Pages>(url);
   }
 
-  findById(id: String): Observable<Jobs> {
-    const url = `${this.baseUrl}jobs/${id}`;
-    return this.http.get<Jobs>(url);
+  findById(id: String): Observable<Races> {
+    const url = `${this.baseUrl}races/${id}`;
+    return this.http.get<Races>(url);
   }
 
-  create(job: Jobs): Observable<Jobs>{
-    const url = `${this.baseUrl}jobs`;
-    return this.http.post<Jobs>(url, job);
+  create(race: Races): Observable<Races>{
+    const url = `${this.baseUrl}races`;
+    return this.http.post<Races>(url, race);
   }
 
-  delete(id: String): Observable<Jobs> {
-    const url = `${this.baseUrl}jobs/${id}`;
-    return this.http.delete<Jobs>(url);
+  delete(id: String): Observable<Races> {
+    const url = `${this.baseUrl}races/${id}`;
+    return this.http.delete<Races>(url);
   }
 
-  update(job: Jobs): Observable<Jobs> {
-    const url = `${this.baseUrl}jobs/${job.id}`;
-    return this.http.put<Jobs>(url, job);
+  update(race: Races): Observable<Races> {
+    const url = `${this.baseUrl}races/${race.id}`;
+    return this.http.put<Races>(url, race);
   }
 
   message(str: String): void {

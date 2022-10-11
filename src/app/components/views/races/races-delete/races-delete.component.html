@@ -1,0 +1,23 @@
+<form>
+    <h1>Deleting Race</h1>
+    <mat-form-field class="form">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" [(ngModel)]="race.raceName" name="raceName" disabled>
+    </mat-form-field>
+
+    <mat-form-field class="input">
+        <mat-label>HP Dice</mat-label>
+        <input matInput type="text" [(ngModel)]="race.hpDice" name="hpDice" disabled>
+    </mat-form-field>
+
+
+    <div class="buttons">
+        <button (click)="delete()" mat-stroked-button color="primary">Confirm</button>
+        <button (click)="cancel()" class="cancel" mat-stroked-button color="primary">Cancel</button>
+    </div>
+
+    <div class="images">
+        <img src="https://i.pinimg.com/originals/01/1b/07/011b07047599ed94c4e60c8ae4fe1cb2.png" alt="">
+        <img src="https://i.pinimg.com/originals/a1/73/f2/a173f2c606cdf256d9ce21e35e87ea86.png" alt="">
+    </div>
+</form>

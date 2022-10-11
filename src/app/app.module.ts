@@ -27,6 +27,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { JobsDeleteComponent } from './components/views/jobs/jobs-delete/jobs-delete.component';
 import { JobsUpdateComponent } from './components/views/jobs/jobs-update/jobs-update.component';
+import { RacesReadComponent } from './components/views/races/races-read/races-read.component';
+import { RacesCreateComponent } from './components/views/races/races-create/races-create.component';
+import { RacesDeleteComponent } from './components/views/races/races-delete/races-delete.component';
+import { RacesUpdateComponent } from './components/views/races/races-update/races-update.component';
 
 
 
@@ -40,7 +44,11 @@ import { JobsUpdateComponent } from './components/views/jobs/jobs-update/jobs-up
     JobsReadComponent,
     JobsCreateComponent,
     JobsDeleteComponent,
-    JobsUpdateComponent
+    JobsUpdateComponent,
+    RacesReadComponent,
+    RacesCreateComponent,
+    RacesDeleteComponent,
+    RacesUpdateComponent
   ],
   imports: [
     BrowserModule,

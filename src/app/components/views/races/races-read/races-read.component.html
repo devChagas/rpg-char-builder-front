@@ -1,0 +1,55 @@
+<div class="content">
+    <div class="title">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/80fb4189-23f5-4a6e-9e7c-5302929f4785/d8v64w8-2da34b83-2620-40a8-a1f9-150056fab565.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzgwZmI0MTg5LTIzZjUtNGE2ZS05ZTdjLTUzMDI5MjlmNDc4NVwvZDh2NjR3OC0yZGEzNGI4My0yNjIwLTQwYTgtYTFmOS0xNTAwNTZmYWI1NjUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.eOQRdosEs4yn8vEHHcDP5cb8hacMbtOGD6BkL89V3is" alt="">
+        <h1>Races</h1>
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7c95ec7b-5a4f-4aef-93df-78fad9ba2505/ddh4sr9-0f59e5a2-24fa-48a7-b3bf-6f599356a38d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdjOTVlYzdiLTVhNGYtNGFlZi05M2RmLTc4ZmFkOWJhMjUwNVwvZGRoNHNyOS0wZjU5ZTVhMi0yNGZhLTQ4YTctYjNiZi02ZjU5OTM1NmEzOGQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.nOFffeVe_VxPJNUy9zeVteWdr2EW_WmyyqpUQ1LCNFM" alt="">
+    </div>
+    
+
+    <button (click)="navigateToRaceCreate()" mat-stroked-button color="primary">New Race</button>
+
+    <div class="mat-elevation-z8 content-table">
+      <table mat-table [dataSource]="races" class="table" >
+
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="raceName">
+          <th mat-header-cell *matHeaderCellDef> NAME </th>
+          <td mat-cell *matCellDef="let row"> {{row.raceName}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="hpDice">
+          <th mat-header-cell *matHeaderCellDef> HP DICE </th>
+          <td mat-cell *matCellDef="let row"> 
+            {{row.hpDice}}
+        </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+          <th class="mat-header" mat-header-cell *matHeaderCellDef> ACTIONS </th>
+          <td mat-cell *matCellDef="let row">
+            <a class="edit" routerLink="update/{{ row.id }}">
+              <i class="material-icons">
+                edit
+              </i>
+            </a>
+            <a class="delete" routerLink="delete/{{ row.id }}">
+              <i class="material-icons">
+                delete
+              </i>
+            </a>
+          </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    </div>
+
+    
+
+</div>
+
