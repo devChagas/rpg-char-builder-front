@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { find } from 'rxjs';
 import { CombatType, Jobs } from '../jobs.model';
 import { JobsService } from '../jobs.service';
 
 @Component({
-  selector: 'app-jobs-delete',
-  templateUrl: './jobs-delete.component.html',
-  styleUrls: ['./jobs-delete.component.css']
+  selector: 'app-jobs-update',
+  templateUrl: './jobs-update.component.html',
+  styleUrls: ['./jobs-update.component.css']
 })
-export class JobsDeleteComponent implements OnInit {
+export class JobsUpdateComponent implements OnInit {
 
   job: Jobs = {
     id: '',
@@ -24,7 +23,7 @@ export class JobsDeleteComponent implements OnInit {
     {value: 'RANGED', viewValue: 'Ranged'},
   ]
 
-  constructor(private service: JobsService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private service: JobsService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.job.id = this.route.snapshot.paramMap.get('id')!;
@@ -37,18 +36,19 @@ export class JobsDeleteComponent implements OnInit {
     });
   }
 
-  delete(): void {
-    this.service.delete(this.job.id!).subscribe(resposta => {
-      this.service.message('Job deleted successfully!');
+  update(): void {
+    this.service.update(this.job).subscribe(resposta => {
       this.router.navigate(['jobs']);
-    }, err => {
-      this.service.message('Job deleted successfully!');
+      this.service.message("Job updated successfully!");
+    },  err => {
       this.router.navigate(['jobs']);
+      this.service.message("Internal Error Server, please try again later!");
     });
-  } //BUGAGO
+  }
 
   cancel(): void {
     this.router.navigate(['jobs']);
   }
 
+  
 }

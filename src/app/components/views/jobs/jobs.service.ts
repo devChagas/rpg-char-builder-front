@@ -34,6 +34,12 @@ export class JobsService {
     return this.http.delete<void>(url);
   }
 
+  //Testar observable com void
+  update(job: Jobs): Observable<Jobs> {
+    const url = `${this.baseUrl}jobs/${job.id}`;
+    return this.http.put<Jobs>(url, job);
+  }
+
   message(str: String): void {
     this.snack.open(`${str}`, 'OK', {
       horizontalPosition: 'end',

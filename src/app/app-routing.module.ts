@@ -4,6 +4,7 @@ import { HomeComponent } from './components/views/home/home.component';
 import { JobsCreateComponent } from './components/views/jobs/jobs-create/jobs-create.component';
 import { JobsDeleteComponent } from './components/views/jobs/jobs-delete/jobs-delete.component';
 import { JobsReadComponent } from './components/views/jobs/jobs-read/jobs-read.component';
+import { JobsUpdateComponent } from './components/views/jobs/jobs-update/jobs-update.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'jobs/delete/:id',
     component: JobsDeleteComponent
+  },
+  {
+    path: 'jobs/update/:id',
+    component: JobsUpdateComponent
   }
 ];
 

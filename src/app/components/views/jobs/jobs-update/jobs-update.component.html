@@ -1,0 +1,27 @@
+<form>
+    <h1>Updating Job</h1>
+    <mat-form-field class="form">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" [(ngModel)]="job.jobName" name="name" placeholder="Ex. Mago">
+    </mat-form-field>
+
+    <mat-form-field class="selection">
+        <mat-label>Combat Type</mat-label>
+        <mat-select [(ngModel)]="job.combatType" name="combatType">
+          <mat-option *ngFor="let combatType of combatTypes" [value]="combatType.value">
+            {{combatType.viewValue}}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="update()" mat-stroked-button color="primary">Confirm</button>
+        <button (click)="cancel()" class="cancel" mat-stroked-button color="primary">Cancel</button>
+    </div>
+
+    <div class="images">
+        <img src="https://i.pinimg.com/originals/59/60/99/596099d41df8e7f62146c3ff98566f62.png" alt="">
+        <img src="https://i.pinimg.com/originals/24/9d/fc/249dfc38361772509c68d4a108abe2fd.png" alt="">
+    </div>
+</form>
+
