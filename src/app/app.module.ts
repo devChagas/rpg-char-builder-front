@@ -31,6 +31,8 @@ import { RacesReadComponent } from './components/views/races/races-read/races-re
 import { RacesCreateComponent } from './components/views/races/races-create/races-create.component';
 import { RacesDeleteComponent } from './components/views/races/races-delete/races-delete.component';
 import { RacesUpdateComponent } from './components/views/races/races-update/races-update.component';
+import { ItemsReadComponent } from './components/views/items/items-read/items-read.component';
+import { ItemsCreateComponent } from './components/views/items/items-create/items-create.component';
 
 
 
@@ -48,7 +50,9 @@ import { RacesUpdateComponent } from './components/views/races/races-update/race
     RacesReadComponent,
     RacesCreateComponent,
     RacesDeleteComponent,
-    RacesUpdateComponent
+    RacesUpdateComponent,
+    ItemsReadComponent,
+    ItemsCreateComponent
   ],
   imports: [
     BrowserModule,

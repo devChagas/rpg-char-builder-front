@@ -2,6 +2,8 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { combineLatest } from 'rxjs';
 import { HomeComponent } from './components/views/home/home.component';
+import { ItemsCreateComponent } from './components/views/items/items-create/items-create.component';
+import { ItemsReadComponent } from './components/views/items/items-read/items-read.component';
 import { JobsCreateComponent } from './components/views/jobs/jobs-create/jobs-create.component';
 import { JobsDeleteComponent } from './components/views/jobs/jobs-delete/jobs-delete.component';
 import { JobsReadComponent } from './components/views/jobs/jobs-read/jobs-read.component';
@@ -47,6 +49,14 @@ const routes: Routes = [
   {
     path: 'races/update/:id',
     component: RacesUpdateComponent
+  },
+  {
+    path: 'items',
+    component: ItemsReadComponent
+  },
+  {
+    path: 'items/create',
+    component: ItemsCreateComponent
   }
 ];
 

@@ -1,0 +1,43 @@
+<form>
+    <h1>Creating New Item</h1>
+    <mat-form-field class="form">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" [(ngModel)]="item.itemName" name="itemName" placeholder="Ex. Arco">
+    </mat-form-field>
+
+    <mat-form-field class="selection">
+        <mat-label>Item Type</mat-label>
+        <mat-select [(ngModel)]="item.itemType" name="itemType">
+          <mat-option *ngFor="let combatType of combatTypes" [value]="combatType.value">
+            {{combatType.viewValue}}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Required Level</mat-label>
+        <input matInput type="text" [(ngModel)]="item.requiredLevel" name="requiredLevel" placeholder="Ex. 1">
+    </mat-form-field>
+
+    <mat-form-field class="selection">
+        <mat-label>Damage</mat-label>
+        <mat-select [(ngModel)]="item.damage" name="damage">
+          <mat-option *ngFor="let hpDice of damages" [value]="hpDice.value">
+            {{hpDice.viewValue}}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="create()" mat-stroked-button color="primary">Create</button>
+        <button (click)="cancel()" class="cancel" mat-stroked-button color="primary">Cancel</button>
+    </div>
+
+    <div class="images">
+        <img src="assets/img/items/item-create2.png" alt="">
+        <img src="assets/img/items/item-create1.png" alt="">
+        
+    </div>
+</form>
+
+
